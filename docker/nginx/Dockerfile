@@ -2,7 +2,7 @@ FROM nginx:latest
 
 ENV NGINX_ROOT /var/www/public
 ENV NGINX_FPM_HOST localhost
-ENV NGINX_FPM_PORT 8083
+ENV NGINX_FPM_PORT 9000
 
 RUN rm -f /etc/nginx/conf.d/default.conf
 RUN rm -f /etc/nginx/nginx.conf
