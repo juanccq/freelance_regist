@@ -8,6 +8,7 @@ use App\Models\Task;
 use App\Models\TrackingTime;
 use App\Http\Requests\StoreTimeRequest;
 use App\Http\Requests\UpdateTimeRequest;
+use App\Services\TrackingTimeService;
 use Session;
 
 class TrackingTimeController extends Controller
@@ -167,5 +168,13 @@ class TrackingTimeController extends Controller
             'status' => 200,
             'message' => 'Successfully deleted!'
         ]);
+    }
+
+    public function report(TrackingTimeService $trackingTimeService)
+    {
+        $trackingTimeService->sendReport();
+        Session::flash('success', 'CSV generation started. You will receive an email shortly.');
+
+        return redirect()->route('dashboard');
     }
 }

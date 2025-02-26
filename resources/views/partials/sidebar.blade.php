@@ -6,7 +6,7 @@
     <a class="flex items-center" href="{{ url('/admin/') }}">
       <img src="{{ asset('images/logo/iso_activos360.png') }}" class="black_logo w-12" alt="logo">
       <img src="{{ asset('images/logo/iso_activos360_white.png') }}" class="white_logo w-12" alt="logo">
-      <span class="ltr:ml-3 rtl:mr-3 text-xl font-Inter font-bold text-slate-900 dark:text-white">activos360</span>
+      <span class="ltr:ml-3 rtl:mr-3 text-xl font-Inter font-bold text-slate-900 dark:text-white">Freelancer</span>
     </a>
     <!-- Sidebar Type Button -->
     <div id="sidebar_type" class="cursor-pointer text-slate-900 dark:text-white text-lg">
@@ -98,12 +98,20 @@
 
         <ul class="sidebar-submenu">
           <li>
-            <a href="{{ route('tracking.create') }}" class="{{ ($request->segment(2) == 'pagos' and $request->segment(3) == 'create') ? 'active' : '' }}">New Tracking</a>
+            <a href="{{ route('tracking.create') }}" class="{{ ($request->segment(2) == 'pagos' and $request->segment(3) == 'create') ? 'active' : '' }}">Nuevo Tiempo</a>
           </li>
           <li>
-            <a href="{{ route('dashboard') }}" class="{{ ($request->segment(1) == 'dashboard') ? 'active' : '' }}">Tracking List</a>
+            <a href="{{ route('dashboard') }}" class="{{ ($request->segment(1) == 'dashboard') ? 'active' : '' }}">Listado de registro</a>
           </li>
         </ul>
+      </li>
+      <li class="">
+        <a href="{{ route('tracking.report') }}" class="navItem">
+          <span class="flex items-center">
+            <iconify-icon class=" nav-icon" icon="heroicons-outline:banknotes"></iconify-icon>
+            <span>Enviar Reporte</span>
+          </span>
+        </a>
       </li>
       @endif
 
