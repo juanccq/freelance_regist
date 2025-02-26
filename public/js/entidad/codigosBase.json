@@ -1,0 +1,47 @@
+[
+  {
+    "key": "pre",
+    "name": "PREFIJO",
+    "color": "#ff5400"
+  },
+  {
+    "key": "are",
+    "name": "AREA",
+    "color": "#ff8e00"
+  },
+  {
+    "key": "dep",
+    "name": "DEPARTAMENTO",
+    "color": "#ffd200"
+  },
+  {
+    "key": "loc",
+    "name": "LOCALIDAD (PROVINCIA)",
+    "color": "#81e650"
+  },
+  {
+    "key": "uni",
+    "name": "UNIDAD DE TRABAJO",
+    "color": "#00d267"
+  },
+  {
+    "key": "tra",
+    "name": "AREA DE TRABAJO",
+    "color": "#00c0ff"
+  },
+  {
+    "key": "ruc",
+    "name": "RUBRO CONTABLE",
+    "color": "#8b48fe"
+  },
+  {
+    "key": "aux",
+    "name": "AUXILIAR CONTABLE (TIPO)",
+    "color": "#ca41fc"
+  },
+  {
+    "key": "inc",
+    "name": "CORRELATIVO",
+    "color": "#ff46fb"
+  }
+]

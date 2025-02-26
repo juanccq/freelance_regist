@@ -1,0 +1,23 @@
+.autocomplete{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.autocomplete-items {
+    border-color: rgb(185 185 185);
+}
+
+.autocomplete-items div{
+    background-color: #e2e8f0;
+    border-bottom-color: rgb(198 198 198);
+}
+
+.autocomplete-items div:hover {
+    background-color: #b5bec8;
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}

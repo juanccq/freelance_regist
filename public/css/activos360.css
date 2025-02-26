@@ -1,0 +1,208 @@
+/*------------------------------------*\
+    Proyect     : activos360
+    Description : Class for CSS
+    Designer    : Luis Villasante
+    E - mail    : luis.villasante[at]gmail.com
+    Filename    : activos360.css
+    Version     : 1.3
+    Date        : Jul, 2023 - 2707
+\*------------------------------------*/
+
+.img-login a img{
+  max-width: 200px;
+}
+
+.logo-login-responsive{
+  max-width: 50px;
+  display: inline !important;
+}
+
+.bg-activos360-orange{
+  --tw-bg-opacity: 1;
+  background-color: #ffa400;
+}
+.bg-activos360-orange-100{
+  --tw-bg-opacity: 1;
+  background-color: #ffdea2;
+}
+
+.fa-color-yellow{
+  color: #ffa400;
+}
+.form-label,
+.text-transform-none,
+.btn span{
+  text-transform: none !important;
+}
+.txt-upper{
+  text-transform: uppercase;
+}
+
+.cursor-move{
+  cursor:n-resize;
+}
+
+/* colores de codigos */
+.cod-prefijo{
+
+}
+.cod-area{
+  color: #3F5EDF;
+}
+.cod-area-bg{
+  background-color: #F6F8FF;
+}
+.cod-depto{
+  color: #FA916B;
+}
+.cod-depto-bg{
+  background-color: #FFFAF8;
+}
+.cod-localidad{
+  color: #3F9A7A;
+}
+.cod-localidad-bg{
+  background-color: #F3FEF8;
+}
+.cod-un-trabajo{
+  color: #0CE7FA;
+}
+.cod-un-trabajo-bg{
+  background-color: #E7FEFF;
+}
+.cod-area-trabajo{
+  color: #F1595C;
+}
+.cod-area-trabajo-bg{
+  background-color: #FEEFEF;
+}
+.cod-rubro-contable{
+  color: #0F172A;
+}
+.cod-rubro-contable-bg{
+  background-color: #F4F5F7;
+}
+.cod-aux-contable{
+  color: #475569;
+}
+.cod-aux-contable-bg{
+  background-color: #E5E7EB;
+}
+.cod-correlativo{
+  color: darkmagenta;
+}
+.cod-correlativo-bg{
+  background-color: #EDF0FF;
+}
+
+/* acordeon */
+.accordion {
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon-width: 1.25rem;
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 1rem;
+  text-align: left;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button {
+    transition: none;
+  }
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+.accordion-button.dark\:text-white::after {
+  background-color: #475569;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button::after {
+    transition: none;
+  }
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+
+.accordion-item {
+  /* color: var(--bs-accordion-color);
+  background-color: var(--bs-accordion-bg);
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color); */
+  border-color:#D2D6DC;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.375rem;
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: var(--bs-accordion-border-radius);
+  border-top-right-radius: var(--bs-accordion-border-radius);
+  margin-bottom: 5px;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+.accordion-item:last-of-type {
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+  margin-top: 5px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+}
+.accordion-item:last-of-type .accordion-collapse {
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+
+.accordion-body {
+  padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+}
+
+.accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+.accordion-flush .accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
+}
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+  border-radius: 0;
+}

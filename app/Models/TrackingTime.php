@@ -11,7 +11,7 @@ class TrackingTime extends Model
 
     protected $table = 'tracking_time';
 
-    protected $fillable = ['task_id', 'user_id', 'duration_minutes'];
+    protected $fillable = ['task_id', 'user_id', 'duration_minutes', 'date', 'description'];
 
     public function task()
     {

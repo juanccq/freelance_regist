@@ -12,7 +12,7 @@
             @if (auth()->user()->is_admin)
             es admin
             @else
-            es usuario
+            <x-register-hours :projects="$projects" :tasks="$tasks" />
             @endif
         </div>
     </div>

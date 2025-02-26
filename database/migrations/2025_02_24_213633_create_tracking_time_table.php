@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('task_id')->constrained();
             $table->foreignId('user_id')->constrained();
+            $table->text('description')->nullable();
             $table->date('date');
             $table->unsignedInteger('duration_minutes')->nullable();
             $table->softDeletes();

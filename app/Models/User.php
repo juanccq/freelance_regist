@@ -64,4 +64,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'user_project', 'user_id', 'project_id');
+    }
+
+    public function isAdmin()
+    {
+        return $this->is_admin;
+    }
+
+    public function trackingTimes()
+    {
+        return $this->hasMany(TrackingTime::class);
+    }
 }
