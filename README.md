@@ -27,10 +27,21 @@
 * Execute migrations. Log into 'freelance_app' container and install composer. Use this command `docker exec -it freelance_app /bin/bash`.
     - Execute `php artisan migrate:fresh --seed`
 
+## Project Structure
+
+The current project has two interfaces:
+* Web interface, can be accessible through `http://localhost:9021`. This interface is mostly used by freelancers to track their time entries, request a report via email and see a list of past time entries.
+* RESTApi interface, can be accessed at the same address through an API client. This interface is mostly used by the Admin to manage the projects, and tasks CRUDs. For testing the API you can use the file `postman/Freelancer.postman_collection.json`.
+
 ## Test
 
 For testing Log into 'freelance_app' container and install composer. Use this command `docker exec -it freelance_app /bin/bash`.
     - Execute `php artisan test`
+
+The following tests were created manually:
+* `TaskRestTest.php`
+* `TrackingTimeTest.php`
+* `AuthRestTest.php`
 
 ## Swagger Documentation
 
@@ -38,7 +49,7 @@ To avoid generating PHP classes with many lines, Swagger documentation is on a s
 
 To generate the swagger documentation use `php artisan l5-swagger:generate`.
 
-To view the documentation check the URL: `http://localhost:9021/api/documentation` (The port 9021 is defined in the `docker-compose.yml` file)
+To view the documentation check the URL: `http://localhost:9021/api/documentation` (The port `9021` is defined in the `docker-compose.yml` file)
 
 
 ## Running Cronjobs

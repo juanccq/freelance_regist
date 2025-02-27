@@ -35,7 +35,7 @@ class TaskController extends Controller
 
         $task = Task::create($data);
 
-        return response()->json(['project' => $task], 201);
+        return response()->json(['task' => $task], 201);
     }
 
     public function update(UpdateTaskRequest $request, Task $task)

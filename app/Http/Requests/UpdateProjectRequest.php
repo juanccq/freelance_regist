@@ -23,7 +23,7 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'name' => ['nullable', 'string', 'max:255'],
-            'description' => ['nullables', 'string'],
+            'description' => ['nullable', 'string'],
         ];
     }
 }
