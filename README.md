@@ -31,3 +31,20 @@
 
 For testing Log into 'freelance_app' container and install composer. Use this command `docker exec -it freelance_app /bin/bash`.
     - Execute `php artisan test`
+
+## Swagger Documentation
+
+To avoid generating PHP classes with many lines, Swagger documentation is on a separate directory. Please check `app\Swagger` directory structure.
+
+To generate the swagger documentation use `php artisan l5-swagger:generate`.
+
+To view the documentation check the URL: `http://localhost:9021/api/documentation` (The port 9021 is defined in the `docker-compose.yml` file)
+
+
+## Running Cronjobs
+
+The current project has tasks that need to be executed by Laravel Scheduler, in order to execute all tasks we need to create a cron tab with the following configuration.
+
+```
+* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+```
