@@ -1,0 +1,158 @@
+[
+  {
+    "codigo": "01",
+    "nombre": "EDIFICACIONES"
+  },
+  {
+    "codigo": "02",
+    "nombre": "MUEBLES Y ENSERES DE OFICINA"
+  },
+  {
+    "codigo": "03",
+    "nombre": "MAQUINARIA EN GENERAL"
+  },
+  {
+    "codigo": "04",
+    "nombre": "EQUIPO MEDICO Y DE LABORATORIO"
+  },
+  {
+    "codigo": "05",
+    "nombre": "EQUIPO DE COMUNICACIONES"
+  },
+  {
+    "codigo": "06",
+    "nombre": "EQUIPO EDUCACIONAL Y RECREATIVO"
+  },
+  {
+    "codigo": "07",
+    "nombre": "BARCOS Y LANCHAS EN GENERAL"
+  },
+  {
+    "codigo": "08",
+    "nombre": "VEHICULOS AUTOMOTORES"
+  },
+  {
+    "codigo": "09",
+    "nombre": "AVIONES"
+  },
+  {
+    "codigo": "10",
+    "nombre": "MAQUINARIA PARA LA CONSTRUCCION"
+  },
+  {
+    "codigo": "11",
+    "nombre": "MAQUINARIA AGRICOLA"
+  },
+  {
+    "codigo": "12",
+    "nombre": "ANIMALES DE TRABAJO"
+  },
+  {
+    "codigo": "13",
+    "nombre": "HERRAMIENTAS EN GENERAL"
+  },
+  {
+    "codigo": "14",
+    "nombre": "REPRODUCTORES Y HEMBRAS DE PEDIGREE"
+  },
+  {
+    "codigo": "15",
+    "nombre": "EQUIPOS DE COMPUTACION"
+  },
+  {
+    "codigo": "16",
+    "nombre": "CANALES DE REGADIO Y POZOS"
+  },
+  {
+    "codigo": "17",
+    "nombre": "ESTANQUES BAÑADEROS Y ABREVADEROS"
+  },
+  {
+    "codigo": "18",
+    "nombre": "ALAMBRADOS TRANQUERAS Y VALLAS"
+  },
+  {
+    "codigo": "19",
+    "nombre": "VIVIENDAS PARA EL PERSONAL"
+  },
+  {
+    "codigo": "20",
+    "nombre": "MUEBLES Y ENSERES EN VIVIENDAS DE PERSONAL"
+  },
+  {
+    "codigo": "21",
+    "nombre": "SILOS  ALMACENES Y GALPONES"
+  },
+  {
+    "codigo": "22",
+    "nombre": "TINGLADOS Y COBERTIZOS DE MADERA"
+  },
+  {
+    "codigo": "23",
+    "nombre": "TINGLADOS Y COBERTIZOS DE METAL"
+  },
+  {
+    "codigo": "24",
+    "nombre": "INSTALACION DE ELECTRIFICACION Y TELEFONIA RURAL"
+  },
+  {
+    "codigo": "25",
+    "nombre": "CAMINOS INTERIORES"
+  },
+  {
+    "codigo": "26",
+    "nombre": "CAÑA DE AZUCAR"
+  },
+  {
+    "codigo": "27",
+    "nombre": "VIDES"
+  },
+  {
+    "codigo": "28",
+    "nombre": "FRUTALES"
+  },
+  {
+    "codigo": "29",
+    "nombre": "LINEAS DE RECOLECCION DE LA INDUSTRIA PETROLERA"
+  },
+  {
+    "codigo": "30",
+    "nombre": "POZOS PETROLEROS"
+  },
+  {
+    "codigo": "31",
+    "nombre": "EQUIPOS DE CAMPO DE LA INDUSTRIA PETROLERA"
+  },
+  {
+    "codigo": "32",
+    "nombre": "PLANTA DE PROCESAMIENTO DE LA INDUSTRIA PETROLERA"
+  },
+  {
+    "codigo": "33",
+    "nombre": "DUCTOS DE LA INDUSTRIA PETROLERA"
+  },
+  {
+    "codigo": "34",
+    "nombre": "TERRENOS"
+  },
+  {
+    "codigo": "36",
+    "nombre": "OTROS ACTIVOS FIJOS"
+  },
+  {
+    "codigo": "37",
+    "nombre": "ACTIVOS INTANGIBLES"
+  },
+  {
+    "codigo": "38",
+    "nombre": "EQUIPO E INSTALACIONES"
+  },
+  {
+    "codigo": "39",
+    "nombre": "OTRAS PLANTACIONES"
+  },
+  {
+    "codigo": "40",
+    "nombre": "ACTIVOS MUSEOLOGICOS Y CULTURALES"
+  }
+]

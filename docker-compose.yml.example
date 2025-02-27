@@ -1,0 +1,57 @@
+version: "3.8"
+services:
+  freelance_app:
+    container_name: freelance_app
+    build:
+      args:
+        user: ${USER}
+        uid: ${UID}
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    expose:
+      - 8082
+    volumes:
+      - .:/var/www
+      - ./public:/var/www/public
+    depends_on:
+      - freelance_db
+    networks:
+      - freelance_network
+
+  freelance_nginx:
+    container_name: freelance_nginx
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+      - ./public:/var/www/public
+    ports:
+      - 8083:80
+    depends_on:
+      - freelance_app
+    environment:
+      NGINX_FPM_HOST: freelance_app
+      NGINX_ROOT: /var/www/public
+    networks:
+      - freelance_network
+
+  freelance_db:
+    platform: linux/x86_64
+    container_name: freelance_db
+    image: mysql:8.0.20
+    restart: always
+    volumes:
+      - ./db_data/db-data:/var/lib/mysql
+    ports:
+      - 6035:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: freelance
+      MYSQL_USER: freelance
+      MYSQL_PASSWORD: freelance
+    networks:
+      - freelance_network
+
+networks:
+  freelance_network:
+    driver: bridge
