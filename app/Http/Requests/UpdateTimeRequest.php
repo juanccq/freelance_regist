@@ -22,7 +22,6 @@ class UpdateTimeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'project_id'    => 'required|integer|exists:projects,id',
             'task_id'       => 'required|integer|exists:tasks,id',
             'duration_minutes' => 'required|integer',
             'date'          => 'required|date'

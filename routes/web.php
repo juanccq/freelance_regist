@@ -15,19 +15,25 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::prefix('dashboard')->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/dashboard/tracking/index-ajax', [TrackingTimeController::class, 'indexAjax'])->name('tracking.index-ajax');
-    Route::post('/dashboard/tracking/{tracking_time}', [TrackingTimeController::class, 'destroy'])->name('tracking.destroy')->where('tracking_time', '[0-9]+');
-    Route::get('/dashboard/tracking/{tracking_time}/edit', [TrackingTimeController::class, 'edit'])->name('tracking.edit')->where('tracking_time', '[0-9]+');
-    Route::get('/dashboard/tracking/create', [TrackingTimeController::class, 'create'])->name('tracking.create');
-    Route::post('/dashboard/tracking/store', [TrackingTimeController::class, 'store'])->name('tracking.store');
-    Route::match(['PUT', 'PATCH'], '/dashboard/tracking/{tracking_time}/edit', [TrackingTimeController::class, 'update'])->name('tracking.update')->where('tracking_time', '[0-9]+');;
+        Route::prefix('/tracking')->group(function () {
+            Route::get('/index-ajax', [TrackingTimeController::class, 'indexAjax'])->name('tracking.index-ajax');
+            Route::post('/{tracking_time}', [TrackingTimeController::class, 'destroy'])->name('tracking.destroy')->where('tracking_time', '[0-9]+');
+            Route::get('/{tracking_time}/edit', [TrackingTimeController::class, 'edit'])->name('tracking.edit')->where('tracking_time', '[0-9]+');
+            Route::get('/create', [TrackingTimeController::class, 'create'])->name('tracking.create');
+            Route::post('/store', [TrackingTimeController::class, 'store'])->name('tracking.store');
+            Route::match(['PUT', 'PATCH'], '/{tracking_time}/edit', [TrackingTimeController::class, 'update'])->name('tracking.update')->where('tracking_time', '[0-9]+');;
 
-    Route::get('/dashboard/tracking/report', [TrackingTimeController::class, 'report'])->name('tracking.report');
+            Route::get('/report', [TrackingTimeController::class, 'report'])->name('tracking.report');
+        });
+    });
 
-    Route::get('profile/profile', [ProfileController::class, 'profile'])->name('profile.profile');
-    Route::get('profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
-    Route::post('profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password-post');
-    Route::get('profile/historic-json/{id}', [ProfileController::class, 'historicJSON'])->name('profile.historic-json');
+    Route::prefix('profile')->group(function () {
+        Route::get('profile', [ProfileController::class, 'profile'])->name('profile.profile');
+        Route::get('change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
+        Route::post('change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password-post');
+        Route::get('historic-json/{id}', [ProfileController::class, 'historicJSON'])->name('profile.historic-json');
+    });
 });
