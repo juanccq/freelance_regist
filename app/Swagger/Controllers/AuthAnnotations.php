@@ -65,38 +65,6 @@ namespace App\Swagger\Controllers;
  *         response=401,
  *         description="Unauthorized")
  * )
- *
- * @OA\Post(
- *     path="/api/auth/reset-password",
- *     summary="Reset Password",
- *     description="Resets a user's password using a token sent via email.",
- *     tags={"Auth"},
- *     @OA\RequestBody(
- *         required=true,
- *         @OA\JsonContent(ref="#/components/schemas/ResetPasswordRequest")
- *     ),
- *     @OA\Response(
- *         response=200,
- *         description="Password successfully reset",
- *         @OA\JsonContent(ref="#/components/schemas/ResetPasswordSuccessResponse")
- *     ),
- *     @OA\Response(
- *         response=400,
- *         description="Invalid token or email",
- *         @OA\JsonContent(
- *             type="object",
- *             @OA\Property(property="message", type="string", example="Invalid token or email")
- *         )
- *     ),
- *     @OA\Response(
- *         response=422,
- *         description="Validation errors",
- *         @OA\JsonContent(
- *             type="object",
- *             @OA\Property(property="message", type="string", example="The given data was invalid.")
- *         )
- *     )
- * )
  */
 
 class AuthAnnotations {}

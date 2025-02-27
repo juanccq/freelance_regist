@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-        $this->searchableFields = ['title'];
+        $this->searchableFields = ['name', 'email'];
         $this->pivotSearch = ['modes' => 'name'];
         $this->checkFiltersAndSort($request, 'title');
 
