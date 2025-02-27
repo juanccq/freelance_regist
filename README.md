@@ -31,7 +31,7 @@
 
 The current project has two interfaces:
 * Web interface, can be accessible through `http://localhost:9021`. This interface is mostly used by freelancers to track their time entries, request a report via email and see a list of past time entries.
-* RESTApi interface, can be accessed at the same address through an API client. This interface is mostly used by the Admin to manage the projects, and tasks CRUDs.
+* RESTApi interface, can be accessed at the same address through an API client. This interface is mostly used by the Admin to manage the projects, and tasks CRUDs. For testing the API you can use the file `postman/Freelancer.postman_collection.json`.
 
 ## Test
 
